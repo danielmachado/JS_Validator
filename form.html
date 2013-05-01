@@ -1,0 +1,29 @@
+﻿<!DOCTYPE HTML>
+<html lang="es" >
+    <head>
+        <title>Formulario</title>
+        <script type="text/javascript" src="form_validator.js"></script>
+    </head>
+    <body>
+        <h1>Formulario de Validación en el cliente</h1>
+        <script type="text/javascript">
+            vF = new valForm();
+        </script>
+        <form name="formulario" action="" method="post" onsubmit="vF.validar();">
+            <p>DNI: <input type="text" name="dni" value="99999999A" /></p>
+            <p>Nombre: <input type="text" name="nombre" /></p>
+            <p>Apellidos: <input type="text" name="apellidos" /></p>
+            <p>Email: <input type="email" value="ejemplo@ejemplo.com" name="email" /></p>
+            <p>Dirección: <input type="text" name="direccion" /></p>
+            <p>Telefono: <input type="tel" value="999999999" name="telefono" /></p>
+            <p>Fecha Nacimiento(AAAA-MM-DD): <input type="date" value="AAAA-MM-DD" name="fecha" /></p>
+            <p>Sexo: </p>
+            <input type="radio" checked name="Sexo" value="Varon">Varon
+            <input type="radio" name="Sexo" value="Mujer">Mujer
+            <input type="radio" name="Sexo" value="Otros">Otros<br/><br/>
+            <input type="submit" />
+            <input type="reset" />
+        </form>
+        <em>En caso de error, se le notificará por una ventana pop-up.</em>
+    </body>
+</html>
